@@ -80,7 +80,9 @@
 6. 当原继承体系中的某个子类不再有任何代码时，将它删除
 7.重复上述步骤，直到原继承体系中的所有子类都被处理过为止。观察新继承体系，看是否可能实施其他重构手法，如：Pull Up Method或Pull Up Field
 
-**范例**: ...
+**范例**: 
+
+![Tease Apart Inheritance](./asset/image/refactor/tease-apart-inheritance.png "Tease Apart Inheritance")
 
 ### Convert Procedural Design to Objects（将过程化设计转化为对象设计）
 
@@ -95,7 +97,9 @@
 3. 针对每一段长长的程序，实施Extract Method及其他相关重构将他分解。再以Move Method将分解后的函数分别移到它所相关的哑数据类中。
 4. 重复上述步骤，直到原始类中的所有函数都被移除。如果原始类是一个完全过程化的类，将它拿掉将大快人心。
 
-**范例**: ...
+**范例**: 
+
+![Convert Procedural Design to Objects](./asset/image/refactor/convert-procedural-design-to-objects.png "Convert Procedural Design to Objects")
 
 ### Separate Domain from Presentation（将领域和表述/显示分离）
 
@@ -111,7 +115,9 @@
 4. 检查展现类中的逻辑。实施Extract Method将展现逻辑从领域逻辑中分离。一旦隔离了领域逻辑，再运用Move Method将它移到领域类。
 5. 以上步骤完成后，得到两组分离的类：展现类处理GUI，领域类处理业务逻辑。领域类不够严谨时进一步重构
 
-**范例**: ...
+**范例**: 
+
+![Separate Domain from Presentation](./asset/image/refactor/separate-domain-from-presentation.png "Separate Domain from Presentation")
 
 ### Extract Hierarchty（提炼继承体系）
 
@@ -137,4 +143,6 @@ Extract Hierarchty是大型重构，一两天不能完成，可能需要几周�
 2. 用Replace Constructor with Factory Method将原类构造函数转变为工厂函数，针对每种情况返回适当子类实例（每种变化情况以类型码表示，用Replace Type Code with Subclasses；每种变化情况在对象生命周期不同阶段有不同体现是用Replace Type Code with State/Strategy）
 3. 对带条件逻辑的函数，实施Replace Conditional with Polymorphism
 
-**范例**: ...
+**范例**: 
+
+![Extract Hierarchty](./asset/image/refactor/extract-hierarchty.png "Extract Hierarchty")
